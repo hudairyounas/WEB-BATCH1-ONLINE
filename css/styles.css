@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* p {
+    color: #F25912;
+}
+
+.h1Tag {
+    color: rgba(255, 0, 0, 1);
+    background: #F25912, ;
+}
+
+body {
+  background-image: url("../images/images.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed;
+  background-size: 700px 500px;
+  opacity: 0.1;
+} */
+
+/* html {
+    font-size: 20px;
+} */
+
+/* .tag {
+     font-family: "Outfit", sans-serif;
+     text-transform: capitalize;
+}
+
+.parent {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+}
+
+.child {
+    width: 100px;
+    color: white;
+    height: 100px;
+    background-color: red;
+    font-size: 8em;
+} */
+
+/** 1rem = 16px */
+
+/*? 0 - 1 */
+/*? 0 - 255 */
+
+/** 100% = 16px */
+/* 
+.heading {
+    text-align: left;
+    text-decoration: line-through solid red;
+    text-transform: lowercase;
+    text-shadow: -5px -5px 2px red;
+} */
+
+/* .heading {
+    background-color: red;
+    width: 300px;
+} */
+
+/* .border {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 3px solid black;
+  padding-bottom: 10px;
+  margin: 10px 15px 20px 25px;
+  box-shadow: 2px 4px 10px 10px black;
+}
+
+.border2 {
+  width: 100px;
+    height: 100px;
+    background-color: black;
+  filter: drop-shadow(3px 3px 1px red);
+  box-shadow: 2px 4px 10px 10px black;
+} */
+/* a:hover {
+    color: red;
+ } */
+
+/* a:link {
+    color: brown;
+    text-decoration: none;
+ }
+
+ a:active {
+    color: green;
+ } */
+
+/* a:visited {
+    color: brown;
+} */
+
+/* .div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 40px;
+    margin: 40px;
+}
+
+.div2 {
+    display: none;
+    visibility: hidden;
+}
+
+span {
+    display: block;
+} */
+
+/* .position1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    left: 30px;
+    right: 40px;
+    bottom: 20px;
+}
+
+.position2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+}
+
+.position3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+} */
+
+/* .fixed {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  top: 10px;
+  left: 200px;
+} */
+
+/* div {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+.zIndex1 {
+    position: relative;
+    left: 80px;
+    z-index: -1;
+}
+
+.zIndex2 {
+    position: relative;
+    left: 90px;
+    z-index: -1;
+} */
+
+/* .container {
+    width: 300px;
+    height: 250px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+div {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+.div1 {
+    background-color: red;
+}
+
+.div2 {
+    background-color: green;
+}
+
+.div3 {
+    background-color: blue;
+} */
+
+/* .resonsiveBox {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 40px;
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .resonsiveBox {
+        background-color: green;
+        font-size: 30px;
+    }
+    .resonsiveBox2 {
+        background-color: blue;
+        font-size: 20px;
+    }
+} */
