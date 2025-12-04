@@ -17,6 +17,33 @@
 // let studentsName = undefined;
 // console.log(typeof studentsName)
 
-let a = 20;
-let b = 40;
-console.log(a + b);
+// console.log("1" - 5);
+// console.log(typeof 78128272718782372376253652635653623n);
+
+// let a = "1297987";
+// console.log(parseInt(a));
+// let a = 10;
+// if (a > 40) {
+//     console.log("hello");
+// } else if (a < 30)  {
+//     console.log("hello 2");
+// }else if (a < 30)  {
+//     console.log("hello 2");
+// }else if (a < 30)  {
+//     console.log("hello 2");
+// }else if (a < 30)  {
+//     console.log("hello 2");
+// } else {
+
+// }
+
+// let num = 30;
+// if (num % 2 == 0) {
+//     console.log("even")
+// } else {
+//     console.log("odd")
+// }
+
+console.log("12" === 12);
+//? 15
+//? -4
