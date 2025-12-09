@@ -83,21 +83,43 @@
 //     w++;
 // }
 
-let a = 10;
-while (a < 4) {
-    console.log("hello");
-    a++;
-}
+// let a = 10;
+// while (a < 4) {
+//     console.log("hello");
+//     a++;
+// }
 
 
-let n = 7;
-do {
-    console.log(n, "hello");
-    n++
-} while (n < 3);
+// let n = 7;
+// do {
+//     console.log(n, "hello");
+//     n++
+// } while (n < 3);
+// i = 1
+// j <= 1
+
+// for (let i = 2; i<= 5; i++) {
+//     let result = "";
+//     for (let j = 1; j <= i; j++) {
+//         result += "*";
+//     }
+//     console.log(result);
+// }
 
 //? a = 0 a++ 
 //? a = a + 1 
 
 //? for in
 //? for of
+
+
+// add(1, 3)
+
+// function add(a, b) {
+//     console.log(a + b);
+// }
+
+
+
+// console.log(add(5, 7));
+// console.log(add(43, 8));
