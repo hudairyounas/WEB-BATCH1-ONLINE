@@ -113,13 +113,57 @@
 //? for of
 
 
+
+
+
 // add(1, 3)
 
 // function add(a, b) {
-//     console.log(a + b);
+//    return a + b;
 // }
+
+// console.log(add(1, 3));
+
+
+// (function (a, b) {
+//     console.log("a + b = ", a + b);
+// })(1, 2);
+
+// (function add() {
+
+// })()
 
 
 
 // console.log(add(5, 7));
 // console.log(add(43, 8));
+
+let str = "hello";
+
+// console.log(str.length)
+
+// function reverseStr(str) {
+//     let reverse = "";
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         reverse += str[i]
+//     }
+
+//     return reverse
+// }
+
+// console.log(reverseStr(str));
+
+
+function calculate(operator, val1, val2) {
+  if (operator === "+") {
+    return val1 + val2;
+  } else if (operator === "-") {
+    return val1 - val2;
+  } else if (operator === "*") {
+    return val1 * val2;
+  } else if (operator === "/") {
+    return val1 / val2;
+  }
+}
+
+console.log(calculate("-", 1,4))
