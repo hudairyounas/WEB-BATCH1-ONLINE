@@ -13,7 +13,6 @@
 // const b = 40;
 // console.log(b);
 
-
 // let studentsName = undefined;
 // console.log(typeof studentsName)
 
@@ -89,7 +88,6 @@
 //     a++;
 // }
 
-
 // let n = 7;
 // do {
 //     console.log(n, "hello");
@@ -106,15 +104,11 @@
 //     console.log(result);
 // }
 
-//? a = 0 a++ 
-//? a = a + 1 
+//? a = 0 a++
+//? a = a + 1
 
 //? for in
 //? for of
-
-
-
-
 
 // add(1, 3)
 
@@ -124,7 +118,6 @@
 
 // console.log(add(1, 3));
 
-
 // (function (a, b) {
 //     console.log("a + b = ", a + b);
 // })(1, 2);
@@ -132,8 +125,6 @@
 // (function add() {
 
 // })()
-
-
 
 // console.log(add(5, 7));
 // console.log(add(43, 8));
@@ -153,17 +144,45 @@ let str = "hello";
 
 // console.log(reverseStr(str));
 
+// function calculate(operator, val1, val2) {
+//   if (operator === "+") {
+//     return val1 + val2;
+//   } else if (operator === "-") {
+//     return val1 - val2;
+//   } else if (operator === "*") {
+//     return val1 * val2;
+//   } else if (operator === "/") {
+//     return val1 / val2;
+//   }
+// }
 
-function calculate(operator, val1, val2) {
-  if (operator === "+") {
-    return val1 + val2;
-  } else if (operator === "-") {
-    return val1 - val2;
-  } else if (operator === "*") {
-    return val1 * val2;
-  } else if (operator === "/") {
-    return val1 / val2;
-  }
-}
+// let b = 10;
+// let a =  `hajshahja ${b}`;
 
-console.log(calculate("-", 1,4))
+// console.log(calculate("-", 1,4))
+
+// function add(a = 12, b= 34) {
+//     return a + b;
+// }
+
+// console.log(add());
+
+// for (let i = 20; i > 10; i++) {
+//   console.log(i);
+// }
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// const add = () => {
+//   console.log("hello");
+// }
+
+// add();
+
+// let arr = [1, 2, 3, "hello"];
+// console.log(arr[4]);
+
+let arr = "hello".split("").reverse().join("");
+console.log(arr);
