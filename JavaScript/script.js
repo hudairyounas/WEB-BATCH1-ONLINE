@@ -184,5 +184,23 @@ let str = "hello";
 // let arr = [1, 2, 3, "hello"];
 // console.log(arr[4]);
 
-let arr = "hello".split("").reverse().join("");
-console.log(arr);
+// let arr = "hello".split("").reverse().join("");
+// console.log(arr);
+
+
+// console.log(arr[0]);
+
+// let arr2 = new Array("apple", "orange");
+// let arr2 = ["hudair", "saad", "ali"];
+
+// function arrPrint(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i]);
+//     }
+// }
+        
+// arrPrint(arr2)
+// let arr2 = ["hudair", "saad", "ali"];
+// arr2.forEach((val, index,arr) => {
+//     console.log(arr)
+// })
