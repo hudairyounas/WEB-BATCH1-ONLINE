@@ -204,3 +204,25 @@ let str = "hello";
 // arr2.forEach((val, index,arr) => {
 //     console.log(arr)
 // })
+
+for (const element of object) {
+    
+}
+for (let item in arr) {
+  console.log(item);
+}
+    
+    
+// let arr = ["apple", "orange", "banana", "grapes"];
+// let arr2 = [1, 32, 43, 65, 78, 13];
+
+// let a = arr2.forEach((val) => {
+//     return val
+// });
+
+// console.log(a);
+
+// let result = arr.map((item,index, arr) => {
+//     return item
+// })
+// console.log(result)
