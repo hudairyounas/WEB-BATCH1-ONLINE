@@ -205,12 +205,12 @@ let str = "hello";
 //     console.log(arr)
 // })
 
-for (const element of object) {
+// for (const element of object) {
     
-}
-for (let item in arr) {
-  console.log(item);
-}
+// }
+// for (let item in arr) {
+//   console.log(item);
+// }
     
     
 // let arr = ["apple", "orange", "banana", "grapes"];
@@ -226,3 +226,56 @@ for (let item in arr) {
 //     return item
 // })
 // console.log(result)
+
+// let arr = [1, 2, 4][0,6];
+// console.log(arr)
+
+// let arr2 = [1, [3, 54]];
+// console.log(arr2[1[0]])
+
+
+// const product = [
+  //   { name: "RAM", price: 300 },
+  //   { name: "Hard Disk", price: 1200 },
+  //   { name: "Graphic Card", price: 4000 },
+  //   { name: "Mother Board", price: 3000 },
+  // ];
+//? array.splice(startIndex, deleteCount, item1, item2, ...);
+
+
+// const arr = ["Rolls-Royce", "Tesla", "BMW", "Porsche"];
+
+// console.log("return value = ", arr.splice(2,1))
+
+
+// console.log("splice arr = ", arr);
+
+
+// const arr = [1, 2, 3, 4, 5];
+
+// let newArr = arr.filter((val) => {
+//   return val % 2 === 0;
+// });
+
+// console.log(newArr)
+// console.log(arr)
+
+
+// const products = [
+//   { name: "RAM", price: 300 },
+//   { name: "Hard Disk", price: 1200 },
+//   { name: "Graphic Card", price: 4000 },
+//   { name: "Mother Board", price: 3000 },
+// ];
+
+// let newProducts = products.filter((val) => {
+//   if (val.price >= 500) {
+//     return val
+//   }
+// })
+
+// console.log(newProducts);
+// console.log(products)
+
+let arr = [1, 2, 4][0,3,8,0];
+console.log(arr)
