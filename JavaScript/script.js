@@ -191,7 +191,7 @@
 // console.log(arr[0]);
 
 // let arr2 = new Array("apple", "orange");
-// let arr2 = ["hudair", "saad", "ali"];
+// let arr2 = ["hudair", "a", "ali"];
 
 // function arrPrint(arr) {
 //     for (let i = 0; i < arr.length; i++) {
@@ -200,7 +200,7 @@
 // }
         
 // arrPrint(arr2)
-// let arr2 = ["hudair", "saad", "ali"];
+// let arr2 = ["hudair", "a", "ali"];
 // arr2.forEach((val, index,arr) => {
 //     console.log(arr)
 // })
@@ -325,7 +325,7 @@
 // console.log(result)
 //* How to Sort and Compare an Array
 //? Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
-// let strArr = ["Saad", "saad", "hudair", "ali"];
+// let strArr = ["a", "a", "hudair", "ali"];
 // console.log(strArr.sort());
 
 // let numbers = [1, 4, 6, 7, 3, 8];
