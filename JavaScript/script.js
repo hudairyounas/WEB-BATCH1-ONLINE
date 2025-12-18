@@ -129,7 +129,7 @@
 // console.log(add(5, 7));
 // console.log(add(43, 8));
 
-let str = "hello";
+// let str = "hello";
 
 // console.log(str.length)
 
@@ -277,5 +277,75 @@ let str = "hello";
 // console.log(newProducts);
 // console.log(products)
 
-let arr = [1, 2, 4][0,3,8,0];
-console.log(arr)
+// let arr = [1, 2, 4][0,3,8,0];
+// console.log(arr)
+
+//* Use Case:
+//? forEach: Used when you want to iterate over the array elements and perform an action on each element, but you don't need a new array.
+
+//? map: Used when you want to create a new array based on the transformation of each element in the original array.
+
+//* lastIndexOf Method
+//? lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+// const numbers = [1, 2, 3, 6, 4, 5, 6, 7, 6, 8, 9];
+// // console.log("indexOf", numbers.indexOf(6));
+// console.log("lastIndexOf", numbers.lastIndexOf(3));
+
+//* find Method
+//? find Method: The find method is used to find the first element in an array that satisfies a provided testing function. It returns the first matching element or undefined if no element is found.
+//* syntax
+// ? array.find(() => {})
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// let result = numbers.find((val, index, arr) => {
+//   return val > 4;
+// });
+// console.log(result);
+// console.log(numbers)
+
+//* findIndex Method
+//? findIndex Method: The findIndex() method of TypedArray instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const result = numbers.findIndex((elem) => {
+//   return elem > 3
+// })
+// console.log(result);
+// console.log(numbers)
+//* filter method
+//! Ex. le'ts say user wants to delete value 6.
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// let value = 6;
+
+// let result = numbers.filter((elem, index)=> {
+//   return elem !== value;
+// })
+// // console.log(first)
+
+
+// console.log(result)
+//* How to Sort and Compare an Array
+//? Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
+// let strArr = ["Saad", "saad", "hudair", "ali"];
+// console.log(strArr.sort());
+
+// let numbers = [1, 4, 6, 7, 3, 8];
+// let result = numbers.sort((a, b) => b - a);
+// console.log(result)
+//? compare callback function
+// syntax
+// const sortedNumbers = numbers.sort((a, b) => a - b);
+//? if(a > b) return 1  => switch the order
+//? if(b > a) return -1  => keep the order
+
+//* Reduce method
+//?  The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+const productPrice = [100, 200, 300, 400, 5005];
+
+let result =productPrice.reduce((accum, curElem, index, arr) => {
+  return accum + curElem
+}, 0)
+
+//? 0 + 100
+//? 100 + 200
+// 
+console.log(result)
