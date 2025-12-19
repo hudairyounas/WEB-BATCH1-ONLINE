@@ -339,13 +339,44 @@
 
 //* Reduce method
 //?  The reduce method in JavaScript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
-const productPrice = [100, 200, 300, 400, 5005];
+// const productPrice = [100, 200, 300, 400, 5005];
 
-let result =productPrice.reduce((accum, curElem, index, arr) => {
-  return accum + curElem
-}, 0)
+// let result =productPrice.reduce((accum, curElem, index, arr) => {
+//   return accum + curElem
+// }, 0)
 
-//? 0 + 100
-//? 100 + 200
-// 
-console.log(result)
+// //? 0 + 100
+// //? 100 + 200
+// // 
+// console.log(result)
+
+// let arr = ["apple", "orange", "grapes"];
+// let result = arr.map((elem) => {
+//   return elem.toUpperCase()
+// })
+
+// console.log(result)
+
+// let numbers = [23, 47, 68, 34];
+
+// let result = numbers.map((elem) => {
+//   if (elem % 2 === 0) {
+//     return elem * elem;
+//   }
+// }).filter((elem) => {
+//   return elem !== undefined;
+// })
+// console.log(result);
+
+// const strArr = ["ahmad", "hudair", "ali"];
+
+// const result = strArr.map((elem) => {
+//   return "Mr. " + elem
+// })
+// console.log(result);
+
+// let str = "apple";
+// let result = str.slice(2, 4);
+// console.log(result)
+// let arr = str.split("").reverse().join("");
+// console.log(arr)
