@@ -187,7 +187,6 @@
 // let arr = "hello".split("").reverse().join("");
 // console.log(arr);
 
-
 // console.log(arr[0]);
 
 // let arr2 = new Array("apple", "orange");
@@ -198,7 +197,7 @@
 //         console.log(arr[i]);
 //     }
 // }
-        
+
 // arrPrint(arr2)
 // let arr2 = ["hudair", "a", "ali"];
 // arr2.forEach((val, index,arr) => {
@@ -206,13 +205,12 @@
 // })
 
 // for (const element of object) {
-    
+
 // }
 // for (let item in arr) {
 //   console.log(item);
 // }
-    
-    
+
 // let arr = ["apple", "orange", "banana", "grapes"];
 // let arr2 = [1, 32, 43, 65, 78, 13];
 
@@ -233,23 +231,19 @@
 // let arr2 = [1, [3, 54]];
 // console.log(arr2[1[0]])
 
-
 // const product = [
-  //   { name: "RAM", price: 300 },
-  //   { name: "Hard Disk", price: 1200 },
-  //   { name: "Graphic Card", price: 4000 },
-  //   { name: "Mother Board", price: 3000 },
-  // ];
+//   { name: "RAM", price: 300 },
+//   { name: "Hard Disk", price: 1200 },
+//   { name: "Graphic Card", price: 4000 },
+//   { name: "Mother Board", price: 3000 },
+// ];
 //? array.splice(startIndex, deleteCount, item1, item2, ...);
-
 
 // const arr = ["Rolls-Royce", "Tesla", "BMW", "Porsche"];
 
 // console.log("return value = ", arr.splice(2,1))
 
-
 // console.log("splice arr = ", arr);
-
 
 // const arr = [1, 2, 3, 4, 5];
 
@@ -259,7 +253,6 @@
 
 // console.log(newArr)
 // console.log(arr)
-
 
 // const products = [
 //   { name: "RAM", price: 300 },
@@ -321,7 +314,6 @@
 // })
 // // console.log(first)
 
-
 // console.log(result)
 //* How to Sort and Compare an Array
 //? Sorting an Array: The sort method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements as strings.
@@ -347,7 +339,7 @@
 
 // //? 0 + 100
 // //? 100 + 200
-// // 
+// //
 // console.log(result)
 
 // let arr = ["apple", "orange", "grapes"];
@@ -380,3 +372,99 @@
 // console.log(result)
 // let arr = str.split("").reverse().join("");
 // console.log(arr)
+
+//? Escape Character: In JavaScript, the backslash \ is used as an escape character. It allows you to include special characters in a string.
+
+//* Code	   Result	    Description
+//* \'	    '	        Single quote
+//* \"	    "	        Double quote
+//* \\	    \	        Backslash
+// let str = "pakistan\thello"
+// console.log(str)
+
+//? 1: String Search Methods
+//? a:  indexOf(): The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+// syntax
+// indexOf(searchString)
+// indexOf(searchString, position)
+// let str1 = "I am "
+// console.log(str1.includes(/I/));
+// let result = str.split("").map((elem, index)=>{
+//   return `${elem} - ${index}`
+// });
+// console.log(result)
+
+
+//? b: lastIndexOf() : The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+// syntax
+// lastIndexOf(searchString)
+// lastIndexOf(searchString, position)
+// let str = "pakistanp"
+// console.log(str.indexOf("p"))
+
+//? c: includes(): Returns true if the string contains the specified value, and false otherwise.
+// let str = "I am learning JavaScript JavaScript";
+// console.log(str.includes("i"))
+
+//? d:  search(): The search() method searches a string for a string (or a regular expression) and returns the position of the match.
+//* Returns the index number where the first match is found. Returns -1 if no match is found.
+// let str = "I am I learning JavaScript JavaScript";
+// console.log(str.search(/I/g))
+
+//? e: match() : Returns an array of the matched values or null if no match is found.
+// let str = "I am learning JavaScript JavaScript";
+// console.log(str.match(/JavaScript/g))
+// console.log(str.match(/I/))
+
+
+//todo here the js converts the normal text into regular expression text.match(/JavaScript/); without the g flag
+
+//? f: matchAll() : Returns an iterator of all matches, providing detailed information about each match. Returns an empty iterator if no match is found.
+// let text = "I am learning JavaScript JavaScript";
+// let matchResult = text.matchAll("JavaScript");
+// // console.log(...matchResult)
+// for (const item of matchResult) {
+//   console.log(item.input)
+// }
+
+//todo  here the js converts the normal text into regular expression text.match(/JavaScript/g); also adds the g flag at the end
+
+//? g: startsWith(): The startsWith() method returns true if a string begins with a specified value.Otherwise it returns false:
+// let str = "I am learning JavaScript JavaScript";
+
+//? h: endsWith(): The endsWith() method returns true if a string ends with a specified value. Otherwise it returns false:
+// let str = "I am learning JavaScript JavaScript";
+
+//? 2: Extracting String Parts
+//? a: slice() extracts a part of a string and returns the extracted part in a new string.
+// let str = "I am learning JavaScript JavaScript";
+// syntax
+// slice(start, end);
+
+//? a: substring: Extracts a portion of the string based on starting and ending indices.
+// let str = "I am learning JavaScript JavaScript";
+// syntax
+// substring(indexStart) // index starts with 0
+// substring(indexStart, indexEnd)
+
+//? charAT() : The charAt() method returns the character at a specified index (position) in a string
+// let str = "I am learning JavaScript JavaScript";
+
+//? charCodeAt() : The charCodeAt() method returns the code of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
+// let str = "I am learning JavaScript JavaScript";
+
+//todo ES2022 introduced the string method at():
+//? The at() method returns the character at a specified index (position) in a string. The at() method returns the same as carAt().
+// let str = "I am learning JavaScript JavaScript";
+
+//? 3: Replacing String Content
+//? replace() : The replace method is used to replace a specified value with another value.
+
+//* Other Useful Methods:
+//? toUpperCase and toLowerCase: Converts the string to uppercase or lowercase.
+// const str = "JavaScript";
+//? trim: Removes whitespace from both ends of the string.
+// const str = "   Hello, World!   ";
+// console.log(str.length);
+
+//? split: Splits the string into an array of substrings based on a specified delimiter.
