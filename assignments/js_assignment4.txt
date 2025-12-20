@@ -1,0 +1,7 @@
+String
+
+1. Find the length of the string "JavaScript".
+2. Print the first character of the string "Programming".
+3. Use indexOf() to find the position of "a" in "JavaScript".
+4. Check whether the string "frontend developer" includes the word "developer".
+5. Extract "Script" from "JavaScript" using slice().
