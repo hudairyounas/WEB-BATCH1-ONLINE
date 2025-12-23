@@ -431,40 +431,62 @@
 
 //? g: startsWith(): The startsWith() method returns true if a string begins with a specified value.Otherwise it returns false:
 // let str = "I am learning JavaScript JavaScript";
+// console.log(str.startsWith("am"));
 
 //? h: endsWith(): The endsWith() method returns true if a string ends with a specified value. Otherwise it returns false:
 // let str = "I am learning JavaScript JavaScript";
+// console.log(str.endsWith("javaScript"))
 
 //? 2: Extracting String Parts
 //? a: slice() extracts a part of a string and returns the extracted part in a new string.
-// let str = "I am learning JavaScript JavaScript";
 // syntax
 // slice(start, end);
+// let str = "I am learning JavaScript JavaScript";
+// console.log(str.slice(-2));
+
 
 //? a: substring: Extracts a portion of the string based on starting and ending indices.
-// let str = "I am learning JavaScript JavaScript";
 // syntax
 // substring(indexStart) // index starts with 0
 // substring(indexStart, indexEnd)
+// let str = "I am learning JavaScript JavaScript";
+// console.log(str.substring(-6))
 
 //? charAT() : The charAt() method returns the character at a specified index (position) in a string
 // let str = "I am learning JavaScript JavaScript";
+// console.log(str.charAt(1));
 
 //? charCodeAt() : The charCodeAt() method returns the code of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535).
-// let str = "I am learning JavaScript JavaScript";
+// let str = "z";
+// console.log(str.charCodeAt(0));
+
+//* A-Z => 65, 90
+//* a-z => 97, 122
 
 //todo ES2022 introduced the string method at():
 //? The at() method returns the character at a specified index (position) in a string. The at() method returns the same as carAt().
+// console.log(str.at(0));
 // let str = "I am learning JavaScript JavaScript";
 
 //? 3: Replacing String Content
 //? replace() : The replace method is used to replace a specified value with another value.
+// let str = "I am learning JavaScript JavaScript";
+// console.log(str.replace(/i/i, "A"))
+
 
 //* Other Useful Methods:
 //? toUpperCase and toLowerCase: Converts the string to uppercase or lowercase.
 // const str = "JavaScript";
+// console.log(str.toUpperCase())
+// const str = "JAVASCRIPT";
+// console.log(str.toLowerCase())
 //? trim: Removes whitespace from both ends of the string.
-// const str = "   Hello, World!   ";
+const str = "    a    ";
+let result = str.trim();
+console.log(result.length)
 // console.log(str.length);
+// console.log(str.trim());
+// console.log(str)
+
 
 //? split: Splits the string into an array of substrings based on a specified delimiter.
