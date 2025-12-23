@@ -1,0 +1,11 @@
+Math Object
+
+1. Write a program to find the square root of 64 using the Math object.
+2. Write a program that prints the value of PI using the Math object.
+3. Find the absolute value of -25.
+4. Generate a random number between 1 and 10.
+5. Write a function that takes a decimal number and returns:
+- Rounded value
+- Floor value
+- Ceil value
+6. Write a program to generate a random OTP of 4 digits.
