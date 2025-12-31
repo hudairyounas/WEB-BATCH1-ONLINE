@@ -60,7 +60,7 @@
 //* ==============================
 
 //? document represents the entire document
-// console.log(document);
+// console.log(document.head);
 
 //? Document.documentElement returns the Element that is the root element of the document (for example, the <html> element for HTML documents).
 
@@ -68,22 +68,38 @@
 // Navigate to the parent node or element.
 
 // Document and DocumentFragment nodes can never have a parent, so parentNode will always return null. It also returns null if the node has just been created and is not yet attached to the tree.
+// let body = document.body;
+// let child = body.firstElementChild
+// console.log(child.parentElement)
 
 //? childNodes / children:
 // Navigate to child nodes or elements.
+// let body = document.body;
+// let child = body.children;
 
-// childNodes is a property that returns a NodeList containing all child nodes of a given element, including text nodes and comment nodes.
-
+// for (const elem of child) {
+    //     console.log(elem)
+    // }
+    
+    // childNodes is a property that returns a NodeList containing all child nodes of a given element, including text nodes and comment nodes.
+    
 //? firstChild / firstElementChild:
 // Navigate to the first child node or element.
+// let body = document.body;
+// console.log(body.firstElementChild)
 
 //todo The Element suffix in firstElementChild and similar properties signifies that only element nodes are considered.
 
 //? lastChild / lastElementChild:
 // Navigate to the last child node or element.
+// let body = document.body;
+// console.log(body.lastElementChild)
 
 //? nextSibling / nextElementSibling:
 // Navigate to the next sibling node or element.
+// let body = document.body;
+// let sibling = body.nextElementSibling
+// console.log(sibling)
 
 //? previousSibling / previousElementSibling:
 // Navigate to the previous sibling node or element.
@@ -110,12 +126,24 @@
 //* DOM Searching
 //* ==============================
 //? getElementById(id): Find an element by its ID.
+// let listUl = document.getElementById("listUl");
+// console.log(listUl.innerHTML)
+// console.log(listUl.innerText)
+// console.log(listUl.textContent)
 
 //? getElementsByClassName(className): Find elements with a specific class name.
+// let cl = document.getElementsByClassName("h1Class")
+
+// for (const elem of cl) {
+//     console.log(elem)
+// }
 
 //? getElementsByTagName(tagName): Find elements with a specific tag name.
+// console.log(document.getElementsByTagName("h1"))
 
 //? querySelector(selector): Find the first element that matches the specified CSS selector.
+// let querySelector = document.querySelector("#h1");
+// console.log(querySelector)
 
 //? querySelectorAll(selector): Find all elements that match the specified CSS selector.
 
@@ -124,6 +152,7 @@
 //* ============================================
 
 //? createElement(tagName): Create a new HTML element.
+// console.log(document.createElement("p"));
 
 //? appendChild(node): Append a node as the last child of a parent node.
 
