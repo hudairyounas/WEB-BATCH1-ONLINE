@@ -4,11 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TODO APP</title>
+    <style>
+      input {
+        width: 300px;
+        outline: none;
+      }
+      input::placeholder {
+        color: red;
+      }
+
+      .divTask {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+    </style>
   </head>
   <body>
     <div>
-      <input type="text" placeholder="Enter your tasks" id="addTaskField" />
+      <input type="text" placeholder="Enter your tasks" id="addTaskField" autocomplete="off" />
       <button id="addTask">Add Tasks</button>
+    </div>
+    <div id="container">
     </div>
     <script src="./script.js"></script>
   </body>
