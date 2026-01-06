@@ -1,0 +1,5 @@
+TODO App
+
+1. Cr`eate a todo App with with all the in js with all the functionality like user can add, delete or update the Task.
+2. User can also check mark the completed tasks.
+3. Upload the code to github and surge and send the link in group.
