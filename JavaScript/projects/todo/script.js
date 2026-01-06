@@ -3,10 +3,10 @@ let addBtn = document.getElementById("addTask");
 let container = document.getElementById("container");
 
 const addTODO = () => {
-    let p = document.createElement("p");
-    let deleteBtn = document.createElement("button");
     let div = document.createElement("div");
+    let p = document.createElement("p");
     let input = document.createElement("input");
+    let deleteBtn = document.createElement("button");
 
     deleteBtn.addEventListener("click", () => {
         div.remove();
@@ -14,9 +14,9 @@ const addTODO = () => {
 
     input.addEventListener("change", () => {
         if (input.checked) {
-            p.style.textDecoration = "line-through";
-        }else {
-            p.style.textDecoration = "none";
+          p.style.textDecoration = "line-through";
+        } else {
+          p.style.textDecoration = "none";
         }
     })
 
@@ -25,8 +25,8 @@ const addTODO = () => {
     input.type = "checkbox";
     p.textContent = input.value;
     
-    div.classList.add("divTask");
     div.appendChild(p)
+    div.classList.add("divTask");
     div.appendChild(deleteBtn)
     div.appendChild(input)
     container.append(div)
