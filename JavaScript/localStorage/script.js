@@ -24,9 +24,9 @@ const getTask = () => {
 }
 
 const removeTask = () => {
-    localStorage.removeItem("obj")
+    localStorage.removeItem("obj");
 }
 
-addBtn.addEventListener("click", addTask)
-getBtn.addEventListener("click", getTask)
+addBtn.addEventListener("click", addTask);
+getBtn.addEventListener("click", getTask);
 removeBtn.addEventListener("click", removeTask);
