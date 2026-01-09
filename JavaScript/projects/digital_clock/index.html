@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Animated Digital Clock</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+        animation: bgShift 20s infinite alternate;
+      }
+
+      @keyframes bgShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1.2s ease-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .clockHolder {
+        background: rgba(15, 15, 35, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 40px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+          inset 0 0 15px rgba(100, 100, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 800px;
+        animation: float 8s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .timeHolder {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .timeOptions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        padding: 10px;
+      }
+
+      .timeOptions i {
+        font-size: 2.2rem;
+        color: #64ffda;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 15px;
+        border-radius: 50%;
+        background: rgba(100, 255, 218, 0.1);
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: iconFloat 6s infinite ease-in-out;
+        animation-delay: calc(var(--i) * 0.5s);
+      }
+
+      .timeOptions i:nth-child(1) {
+        --i: 0;
+      }
+      .timeOptions i:nth-child(2) {
+        --i: 1;
+      }
+      .timeOptions i:nth-child(3) {
+        --i: 2;
+      }
+
+      @keyframes iconFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .timeOptions i:hover {
+        color: #ff2e63;
+        background: rgba(255, 46, 99, 0.2);
+        transform: translateY(-8px) scale(1.15) !important;
+        box-shadow: 0 8px 20px rgba(255, 46, 99, 0.4);
+      }
+
+      .mainDiv {
+        width: 100%;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      #clock {
+        font-size: 6.5rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #64ffda, #ff2e63, #64ffda);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+        letter-spacing: 3px;
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.03);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 900px) {
+        .timeHolder {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        #clock {
+          font-size: 5rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .clockHolder {
+          padding: 25px;
+        }
+
+        #clock {
+          font-size: 3.5rem;
+        }
+
+        .timeOptions i {
+          font-size: 1.8rem;
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        #clock {
+          font-size: 2.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clockHolder">
+        <div class="timeHolder">
+          <div class="timeOptions">
+            <i class="fas fa-clock" data-title="Time"></i>
+            <i class="fas fa-stopwatch" data-title="StopWatch"></i>
+            <i class="far fa-clock" data-title="CountDown"></i>
+          </div>
+          <div class="mainDiv">
+            <p id="clock"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const timeFunc = () => {
+        const date = new Date().toLocaleTimeString();
+        document.querySelector("#clock").innerText = date;
+      };
+      timeFunc();
+      setInterval(() => {
+        timeFunc();
+      }, 1000);
+    </script>
+  </body>
+</html>
