@@ -1,0 +1,24 @@
+Questions
+
+1. Updated Assignment – To-Do App (with Local Storage)
+You have already created a To-Do App.
+Now update the same project with the following requirement:
+Task:
+Modify your To-Do App so that all tasks are stored in localStorage.
+When the page is refreshed or the browser is closed and reopened, the tasks must still be visible.
+Add, delete, and update tasks should also update localStorage accordingly.
+Goal:
+To understand how localStorage works and how to save data permanently in the browser using JavaScript.
+Make sure your code is clean and properly commented.
+
+
+2. Write a JavaScript program to create a Clock.   
+Note: The output will come every second.
+Expected Console Output :
+"14:37:42"
+"14:37:43"
+"14:37:44"
+"14:37:45"
+"14:37:46"
+"14:37:47"
+ 
