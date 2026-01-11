@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+        font-family: "Urbanist", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(135deg, #1d2671, #c33764);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        width: 34rem;
+        padding: 3rem 2.5rem;
+        border-radius: 1.6rem;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      #countDown {
+        font-size: 8rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 2.5rem;
+        letter-spacing: 0.3rem;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        padding: 1rem 0;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .start_btn {
+        background: linear-gradient(135deg, #00c853, #b2ff59);
+        color: #0a2f1a;
+      }
+
+      .stop_btn {
+        background: linear-gradient(135deg, #ff1744, #ff8a80);
+        color: #3b000c;
+      }
+
+      .reset_btn {
+        background: linear-gradient(135deg, #2979ff, #82b1ff);
+        color: #031a3a;
+      }
+
+      .time_btn {
+        background: linear-gradient(135deg, #ff9100, #ffd180);
+        color: #3a1d00;
+      }
+
+      .clear_btn {
+        grid-column: span 2;
+        background: linear-gradient(135deg, #eeeeee, #cfcfcf);
+        color: #222;
+      }
+
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .resetValue {
+        max-height: 8rem;
+        overflow-y: auto;
+        padding-top: 1rem;
+      }
+
+      .resetValue p {
+        font-size: 1.6rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.6rem 1rem;
+        border-radius: 0.8rem;
+        margin-bottom: 0.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p id="countDown">0</p>
+      <div class="buttons">
+        <button class="start_btn">Start</button>
+        <button class="reset_btn">Reset</button>
+        <button class="stop_btn">Stop</button>
+        <button class="time_btn">getTime</button>
+        <button class="clear_btn">clearTime</button>
+      </div>
+      <div class="resetValue"></div>
+    </section>
+    <script>
+      const countDown = document.querySelector("#countDown");
+      const start_btn = document.querySelector(".start_btn");
+      const reset_btn = document.querySelector(".reset_btn");
+      const stop_btn = document.querySelector(".stop_btn");
+      const time_btn = document.querySelector(".time_btn");
+      const clear_btn = document.querySelector(".clear_btn");
+      const resetValue = document.querySelector(".resetValue");
+      let initialCount = 0;
+      let intervalId;
+      // initialCount + 1
+
+      // Function to start the timer
+      const start = () => {
+        intervalId = setInterval(() => {
+          countDown.innerText = ++initialCount;
+        }, 1000);
+      };
+
+      // Function to stop the timer and show stop time
+      const stop = () => {
+        clearInterval(intervalId);
+      };
+
+      // Function to reset the timer
+      const reset = () => {
+        initialCount = 0;
+        countDown.innerText = initialCount;
+        clearInterval(intervalId);
+      };
+      // Function to show stop value
+      const showValue = () => {
+        const newPara = document.createElement("p");
+        newPara.innerText = initialCount;
+        resetValue.append(newPara);
+      }
+
+      // Function to clear show time
+      const clear = () => {
+        resetValue.innerHTML = "";
+      }
+
+      // Event listeners
+      start_btn.addEventListener("click", start);
+      stop_btn.addEventListener("click", stop);
+      reset_btn.addEventListener("click", reset);
+      time_btn.addEventListener("click", showValue);
+      clear_btn.addEventListener("click", clear);
+    </script>
+  </body>
+</html>
