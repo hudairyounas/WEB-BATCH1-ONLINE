@@ -1,0 +1,40 @@
+📝 Question 1:
+Create a JavaScript object named student that stores the following information:
+    Student name
+    Age
+    Course name
+    Is the student enrolled? (true / false)
+    After creating the object, do the following tasks:
+    Print the entire object in the console
+    Print only the student name using dot notation
+    Update the course name to "Web Development"
+    Add a new property called feesPaid with value true
+    Delete the age property from the object
+    Print the updated object in the console
+
+✅ Instructions for Students:
+    Use object literal syntax
+    Use console.log() to show output
+    Write clean and readable code
+
+
+
+📝 Question 2:
+Create a JavaScript object named course that stores the following details:
+    Course title
+    Instructor name
+    Total duration (in months)
+    Fees
+    An array of students enrolled
+    Now perform the following tasks:
+    Print the course title and instructor name
+    Add a new student name to the students array
+    Update the fees value
+    Add a method called getCourseDetails() that prints all course information in a readable format
+    Use the method to display course details in the console
+    Check if the course duration is more than 3 months and print an appropriate message
+
+✅ Instructions for Students:
+    Use dot notation and bracket notation where required
+    Use console.log() for output
+    Keep your code simple and well-structured
