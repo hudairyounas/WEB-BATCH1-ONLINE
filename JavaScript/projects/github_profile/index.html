@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Practice</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+      }
+
+      .container {
+        background: #ffffff;
+        width: 360px;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      .search-box {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        flex: 1;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        outline: none;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+      }
+
+      button {
+        padding: 12px 16px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #667eea;
+        object-fit: cover;
+        margin: 15px 0;
+      }
+
+      h1 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <input
+          type="text"
+          name="username"
+          id="usernameField"
+          autocomplete="off"
+          placeholder="GitHub username"
+        />
+        <button id="getProfile">Search</button>
+      </div>
+
+      <img src="" alt="" id="userImg" />
+      <h1 id="username">User Name</h1>
+      <p id="userBio">Bio will appear here...</p>
+    </div>
+
+    <script>
+      const usernameField = document.getElementById("usernameField");
+      const getProfile = document.getElementById("getProfile");
+      const username = document.getElementById("username");
+      const userBio = document.getElementById("userBio");
+      const userImg = document.getElementById("userImg");
+
+      const getProfileFunc = async (userName) => {
+        try {
+          let result = await fetch("https://lapi.github.com/users/" + userName);
+          let response = await result.json();
+          userImg.src = response.avatar_url;
+          username.innerText = response.name
+          userBio.innerText = response.bio  
+          console.log(response)
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      getProfile.addEventListener("click", () => {
+        getProfileFunc(usernameField.value);
+      });
+    </script>
+  </body>
+</html>
