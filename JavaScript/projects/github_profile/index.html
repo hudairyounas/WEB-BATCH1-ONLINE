@@ -118,7 +118,7 @@
 
       const getProfileFunc = async (userName) => {
         try {
-          let result = await fetch("https://lapi.github.com/users/" + userName);
+          let result = await fetch(`https://api.github.com/users/${userName}`);
           let response = await result.json();
           userImg.src = response.avatar_url;
           username.innerText = response.name

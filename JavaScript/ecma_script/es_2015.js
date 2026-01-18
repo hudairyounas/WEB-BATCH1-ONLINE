@@ -1,29 +1,66 @@
-//* ==================
-//? Ecma Script 2015
-//* ==================
 
-//* =========================================
-//*  Object Properties
-//* =========================================
-// const name = "Hudair";
-// const skill = "JavaScript";
 
-//? traditional/normal way
-// const obj1 = { name: name, skill: skill };
-// console.log(obj1);
+// function name(params) {
+    
+// }
 
-//? Using shorthand notation for object property
+// const func = () => {
 
-// Instead of specifying name: name and skill: skill, you can simply use name and skill directly within the object literal.
-//* ==========================================
-//?  Destructuring
-//* =========================================
-//? Destructuring in JavaScript is a way to extract values from arrays or objects and assign them to variables in a concise and readable manner.
+// }
+// let name = "Ali";
+// let age = 18;
 
-//* Destructuring Arrays:
-//? Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
+// console.log(`My name is ${name} and I am ${age} years old`);
 
-//? 1: Extracting specific elements:
-// const numbers = [10, 20, 30];
-// const [, , third] = numbers;
-// console.log(third);
+// function greet(name = "Student") {
+//   console.log(`Hello ${name}`);
+// }
+
+// greet("Hudair"); // Hello Student
+
+// const obj = {
+//   name: "Hudair",
+//   classA: "11th",
+// };
+
+// const {name, classA} = obj;
+// console.log(name,classA)
+
+// const arr = [1, 3, 5];
+// const [,, second] = arr;
+// console.log(second)
+
+
+// const arr = [1, 3, 5];
+// const arr2 = [1, 3, 5, ...arr];
+// let result = arr.push("hello")
+// console.log(arr2)
+// console.log(Math.pow(2, 3))
+// console.log(2 ** 3)
+
+// const student = { name: "Ali", age: 20, clas:    };
+
+// console.log(Object.entries(student));
+// [["name", "Ali"], ["age", 20]]
+
+// let id = "5";
+
+// console.log(id.padStart(15, "*")); // 005
+// console.log(id.padEnd(3, "*"));   // 500
+
+// const student = {
+//   name: "Ali",
+//   age: 20,
+//   course: "JS",
+// };
+
+// const { name, ...details } = student;
+
+// console.log(name); 
+// console.log(details);
+// const arr = [1, 2, [3, [4, [5]]]];
+
+// console.log(arr.flat(3))
+let aa = 10;
+
+
