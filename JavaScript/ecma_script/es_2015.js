@@ -61,6 +61,27 @@
 // const arr = [1, 2, [3, [4, [5]]]];
 
 // console.log(arr.flat(3))
-let aa = 10;
+// let aa = 10;
 
 
+const user = {
+  name: "John Doe",
+  address: {
+    city: "New York"
+  }
+};
+
+// Traditional approach (error-prone if 'address' is missing)
+// const city = user.address.city; // Throws TypeError if address is null/undefined
+
+// Safe traditional approach
+// let city;
+// if (user && user.address) {
+//   city = user.address.city;
+// }
+
+// // With optional chaining (more concise)
+// const cityOC = user?.address?.city; // "New York"
+// const zipcodeOC = user?.address?.zipcode; // undefined (no error)
+// const streetOC = user?.location?.street; // undefined (no error, as 'location' is missing)
+// console.log(streetOC)
