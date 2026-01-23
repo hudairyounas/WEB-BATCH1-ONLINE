@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- New stylesheet -->
+    <style>
+      /* -------------------------------------------------
+   1️⃣ Color & Typography Variables – NEW SCHEME
+   ------------------------------------------------- */
+      :root {
+        /* Base colors */
+        --bg: #121212; /* very dark gray / near‑black */
+        --card-bg: #1e1e1e; /* slightly lighter card background */
+        --accent: #4db6ac; /* teal‑green accent */
+        --text: #e0e0e0; /* off‑white text */
+        --muted: #9e9e9e; /* medium gray for secondary text */
+
+        /* UI helpers */
+        --shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        --transition: background 0.2s ease, transform 0.2s ease;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .weather-card {
+        width: 420px;
+        max-width: 90%;
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .search-bar {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+      .search-bar i {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        pointer-events: none;
+      }
+      .search-bar input {
+        width: 100%;
+        padding: 0.75rem 2.5rem;
+        border: 1px solid #333;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #2c2c2c;
+        color: var(--text);
+        transition: var(--transition);
+      }
+      .search-bar input:focus {
+        outline: none;
+        border-color: var(--accent);
+        background: #2c2c2c;
+      }
+      .overview {
+        text-align: center;
+      }
+      .city-name {
+        font-size: 1.9rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      .date-time {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .condition {
+        display: inline-block;
+        margin-top: 0.8rem;
+        padding: 0.35rem 1rem;
+        border-radius: 20px;
+        background: #263238;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .icon img {
+        width: 120px;
+        margin-top: 0.5rem;
+      }
+      .temperature {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+      }
+      .min-max {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 0.3rem;
+      }
+      .details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .detail-card {
+        background: #2c2c2c;
+        border-radius: 12px;
+        padding: 1rem;
+        text-align: center;
+        transition: var(--transition);
+      }
+      .detail-card:hover {
+        background: #333;
+        transform: translateY(-3px);
+      }
+      .detail-card i {
+        font-size: 1.4rem;
+        color: var(--accent);
+        margin-bottom: 0.4rem;
+      }
+      .detail-card p:first-child {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .detail-card p:last-child {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text);
+        margin-top: 2px;
+        margin-bottom: 0;
+      }
+      @media (max-width: 480px) {
+        .weather-card {
+          padding: 1.5rem;
+        }
+        .city-name {
+          font-size: 1.6rem;
+        }
+        .temperature {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="weather-card">
+      <!-- Search -->
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search city" class="city-input" />
+        <button class="search-btn" style="background-color: red;">Search</button>
+      </div>
+
+      <!-- Weather Overview -->
+      <div class="overview">
+        <h1 class="city-name">New York</h1>
+        <h1 class="city-name" id="country">New York</h1>
+        <p class="date-time">Monday, 12 Jan 2026</p>
+        <span class="condition">Clear Sky</span>
+        <div class="icon"><img class="img" src="" alt="Clear" /></div>
+        <p class="temperature">22°</p>
+        <div class="min-max">
+          <p class="weather-min">Min: 18°</p>
+          <p class="weather-max">Max: 26°</p>
+        </div>
+      </div>
+
+      <!-- Detailed Info -->
+      <section class="details">
+        <article class="detail-card">
+          <i class="fa-solid fa-temperature-half"></i>
+          <p>Feels Like</p>
+          <p>21°</p>
+        </article>
+        <article class="detail-card">
+          <i class="fa-solid fa-droplet"></i>
+          <p>Humidity</p>
+          <p>62%</p>
+        </article>
+        <article class="detail-card">
+          <i class="fa-solid fa-wind"></i>
+          <p>Wind</p>
+          <p>14 km/h</p>
+        </article>
+        <article class="detail-card">
+          <i class="fa-solid fa-gauge-high"></i>
+          <p>Pressure</p>
+          <p>1013 hPa</p>
+        </article>
+      </section>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
