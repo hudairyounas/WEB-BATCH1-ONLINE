@@ -557,3 +557,9 @@
 // console.log(rand);
 
 
+var a = "10";
+var b = "20";
+
+// int a= "1"
+let total = a + b;
+console.log(total)
