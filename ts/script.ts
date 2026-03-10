@@ -29,3 +29,7 @@ let obj:User & User2  = {
 }
 
 console.log(obj)
+
+
+let a:number = 10;
+console.log(a)

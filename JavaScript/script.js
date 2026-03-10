@@ -563,3 +563,7 @@ var b = "20";
 // int a= "1"
 let total = a + b;
 console.log(total)
+document.createElement("h1");
+
+document.getElementById("h1Tag")
+$( "button#continue" ).html( "Next Step..." )
