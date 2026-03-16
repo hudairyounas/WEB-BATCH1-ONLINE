@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Frontend Mastery",
+        "description": "Master HTML, CSS, and modern JavaScript to build beautiful user interfaces."
+    },
+    {
+        "id": 2,
+        "title": "React Specialization",
+        "description": "Deep dive into React.js, Hooks, Redux, and modern state management."
+    },
+    {
+        "id": 3,
+        "title": "Backend Development",
+        "description": "Build scalable APIs and manage databases using Node.js and MongoDB."
+    },
+    {
+        "id": 4,
+        "title": "Full-Stack Pro",
+        "description": "Our comprehensive track covering everything from design to deployment."
+    }
+]
