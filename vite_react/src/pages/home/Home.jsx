@@ -1,32 +1,31 @@
 import React from "react";
 import CourseCard from "../../components/CourseCard";
 import topCard from "../../api/topCard.json";
-
-
+import studentsSayApi from "../../api/studentsSay.json";
+import StudentsSay from "../../components/StudentsSay";
+import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
 
 const Home = () => {
-  topCard.map((item) => {
-    console.log(item.title)
-  })
   return (
     <>
-      <section id="hero" class="hero">
-        <div class="container">
+      <section id="hero" className="hero">
+        <div className="container">
           <h1>Learn Modern Web Development</h1>
           <p>
             Master the skills needed to build stunning, high-performance web
             applications with our industry-leading coding courses.
           </p>
-          <a href="#courses" class="btn-primary">
+          <a href="#courses" className="btn-primary">
             Explore Courses
           </a>
         </div>
       </section>
 
-      <section id="about" class="about">
-        <div class="container">
-          <div class="content">
-            <div class="about-text">
+      <section id="about" className="about">
+        <div className="container">
+          <div className="content">
+            <div className="about-text">
               <h2>Why FuturePlix?</h2>
               <p>
                 We provide a project-based learning environment that prepares
@@ -38,7 +37,7 @@ const Home = () => {
                 everything you need to become a Full-Stack Developer.
               </p>
             </div>
-            <div class="about-image">
+            <div className="about-image">
               <div
                 style={{
                   width: "100%",
@@ -52,22 +51,40 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="courses" class="courses">
-        <div class="container">
+      <section id="courses" className="courses">
+        <div className="container">
           <h2>Our Top Courses</h2>
-          <div class="course-grid">
-            {
-              <article class="course-card">
-                <h3>Frontend Mastery</h3>
-                <p>
-                  Master HTML, CSS, and modern JavaScript to build beautiful
-                  user interfaces.
-                </p>
-              </article>
-            }
+          <div className="course-grid">
+            {topCard.map((item, index) => {
+              return (
+                <article key={item.id} className="course-card">
+                  <CourseCard name={item.title} desc={item.description} />
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
+
+      <section id="testimonials" className="testimonials">
+        <div className="container">
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>
+            What Our Students Say
+          </h2>
+          <div className="testimonial-container">
+            {studentsSayApi.map((item) => {
+              return (
+                <article key={item.id} className="testimonial-card">
+                  <StudentsSay name={item.name} desc={item.description} />
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <Contact />
+      <Footer />
     </>
   );
 };

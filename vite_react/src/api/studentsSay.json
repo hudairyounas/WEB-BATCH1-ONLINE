@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Alex Johnson",
+        "description": "The best coding institute I've ever joined. The projects are actually relevant!"
+    },
+    {
+        "id": 2,
+        "name": "Sarah Miller",
+        "description": "FuturePlix helped me land my first dev job in just 6 months. Highly recommended."
+    },
+    {
+        "id": 3,
+        "name": "James Lee",
+        "description": "Great mentors and a very supportive community. The React course was a game changer."
+    }
+]
